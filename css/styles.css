@@ -1,0 +1,447 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?16482947');
+  src: url('../fonts/fontello.eot?16482947#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?16482947') format('woff2'),
+       url('../fonts/fontello.woff?16482947') format('woff'),
+       url('../fonts/fontello.ttf?16482947') format('truetype'),
+       url('../fonts/fontello.svg?16482947#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?16482947#fontello') format('svg');
+  }
+}
+*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-share:before { content: '\e800'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-download-cloud:before { content: '\f0ed'; } /* '' */
+
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+
+figure
+{
+  margin: 0;
+  padding: 0;
+}
+
+figure img
+{
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.menu
+{
+  font-size: 1.5em;
+  background: rgba(236,25,44,.8);
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: none;
+  z-index: 2;
+  cursor: pointer;
+}
+.gridContainer
+{
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "aside video"
+                       "aside otrasCosas";
+  min-height: 100vh;
+}
+.aside
+{
+  grid-area: aside;
+  background: #151b31;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 16px;
+}
+.aside div
+{
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+.aside figure
+{
+  width: 200px;
+  margin-left: -7px;
+}
+.videoContainer
+{
+  grid-area: video;
+}
+/* .comentarioscontainer */
+.subseccion
+{
+  grid-area: otrasCosas;
+}
+.aside h2
+{
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.aside ol
+{
+  margin: 0;
+  padding-left: 20px;
+}
+.aside ol li
+{
+  padding-left: 20px;
+  margin-bottom: .8em;
+}
+.amigos img
+{
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.amigos ul
+{
+  margin: 0;
+  padding-left: 0;
+}
+.amigos ul li
+{
+  list-style: none;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+.videoContainer
+{
+  display: grid;
+  grid-template-rows: 1fr 120px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.videoResponsive
+{
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+.videoResponsive iframe
+{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left:0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.videoDetalles
+{
+  padding: 10px 20px;
+}
+.videoDetalles h1
+{
+  color: #364251;
+  font-size: 1.2em;
+  margin: 0 0 5px;
+}
+.videoDetalles h2
+{
+  color: #939393;
+  font-size: .8em;
+  margin: 0;
+}
+.botones
+{
+  margin-top: 10px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.left,
+.right
+{
+  display: flex;
+}
+.left
+{
+  min-width: 296px;
+}
+.bta-cta
+{
+  padding: 10px;
+  font-size: .8em;
+  background: linear-gradient(to left, #f66395, #fd0f0a);
+  border-radius: 15px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 50px;
+}
+.btn-share,
+.btn-save
+{
+  font-size: .7em;
+  text-decoration: none;
+  color: #364251;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+.btn-share i,
+.btn-save i
+{
+  display: block;
+  font-size: 1.5em;
+}
+.right a
+{
+  text-decoration: none;
+  color: #fff;
+  width: 80px;
+  padding: 5px 0;
+  border-radius: 40px;
+  /* background: #364251; */
+  display: block;
+  text-align: center;
+  font-size: .7em;
+  margin-right: 10px;
+  height: 15px;
+}
+.right a:nth-of-type(1)
+{
+  background:#9a57fc;
+}
+.right a:nth-of-type(2)
+{
+  background:#12ecbf;
+}
+.right a:nth-of-type(3)
+{
+  background:#ec192c;
+}
+.right a:nth-of-type(4)
+{
+  background:#e63484;
+  margin-right: 0;
+}
+.subseccion
+{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas: "comentario sugerencias";
+}
+.comentariosContainer
+{
+  grid-area: comentario;
+  margin-right: 40px;
+}
+.sugerenciasContainer
+{
+  grid-area: sugerencias;
+}
+.comentariosContainer h2,
+.sugerenciasContainer h2
+{
+  font-weight: 400;
+  font-size: 1em;
+  color: #364251;
+}
+.escribir
+{
+  background: #f2f2f2;
+  border-bottom: 2px solid #ececec;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.escribir img
+{
+  margin: 0 10px 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.escribir input[type=text]
+{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  background: none;
+}
+.escrito
+{
+  display: flex;
+  align-items: center;
+  color: #364251;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.escrito p:first-child
+{
+  font-weight: bold;
+}
+.escrito p
+{
+  margin: 0 0 5px 0;
+}
+.escrito img
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.sugerencias
+{
+  width: 300px;
+}
+.sugerencias img
+{
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 3px 6px 9px rgba(0,0,0,0.3);
+}
+@media screen and (max-width: 1000px)
+{
+  .gridContainer
+  {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "video video"
+                         "otrasCosas otrasCosas";
+  }
+  .aside
+  {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 240px;
+    transition: .3s;
+    z-index: 1;
+    overflow: auto;
+  }
+  .active
+  {
+    left: 0;
+  }
+  .menu
+  {
+    display: block;
+  }
+}
+@media screen and (max-width: 850px)
+{
+  .subseccion
+  {
+    grid-template-columns: 1fr;
+    grid-template-areas: "sugerencias"
+                         "comentario";
+  }
+  .sugerenciasContainer
+  {
+    overflow: hidden;
+  }
+  .slide
+  {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .sugerencias
+  {
+    flex: 0 0 auto;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 726px)
+{
+  .bta-cta
+  {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width:703px)
+{
+  .botones
+  {
+    flex-direction: column;
+  }
+  .left
+  {
+    margin-top: 8px;
+  }
+  .bta-cta
+  {
+    padding: 5px 10px;
+  }
+  .btn-share i, .btn-save i
+  {
+    font-size: 1em;
+  }
+  .right
+  {
+    order: -1;
+  }
+  .right a
+  {
+    padding: 2px 0;
+    width: 60px
+  }
+}
